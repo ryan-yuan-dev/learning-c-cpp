@@ -2,7 +2,7 @@
 #define SIMPLE_THREAD_H
 
 // 声明线程函数
-void threadFunc();
+void thread_func(int *result);
 
 // 声明创建线程的函数
 void create_thread();
