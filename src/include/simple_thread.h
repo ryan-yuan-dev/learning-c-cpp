@@ -3,12 +3,21 @@
 #ifndef SRC_INCLUDE_SIMPLE_THREAD_H_
 #define SRC_INCLUDE_SIMPLE_THREAD_H_
 
+#ifdef __cplusplus
 namespace loongflavors {
 // 声明线程函数
-void thread_func(int *result);
+void CaluteInSubthread(int *result);
 
 // 声明创建线程的函数
 void CreateThread();
 }  // namespace loongflavors
+#endif
+
+#ifdef __cplusplus
+extern "C" {
+void loongflavors_calute_in_subthread(int *result);
+void loongflavors_create_thread();
+}
+#endif
 
 #endif  //  SRC_INCLUDE_SIMPLE_THREAD_H_

@@ -63,7 +63,7 @@
   "C_Cpp.vcFormat.indent.accessSpecifiers": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "workbench.colorTheme": "Visual Studio Light - C++",
-  "C_Cpp.default.compilerPath": "/usr/bin/g++",
+  "C_Cpp.default.compilerPath": "/usr/bin/clang++",
   "C_Cpp.clang_format_fallbackStyle": "none",
   "C_Cpp.clang_format_path": "/usr/bin/clang-format"
 }
