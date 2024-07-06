@@ -3,33 +3,27 @@
 #include <iostream>
 #include <thread>
 
-using std::cout;
-using std::endl;
-using std::thread;
-using std::chrono::seconds;
-using std::this_thread::get_id;
-using std::this_thread::sleep_for;
 namespace loongflavors {
 void ThreadFunc(int *result) {
   int total = 0;
   for (size_t i = 0; i < 100; i++) {
     total += i;
   }
-  cout << "Thread function called" << endl;
-  sleep_for(seconds(2));
-  cout << "Thread function finished" << endl;
+  std::cout << "Thread function called" << std::endl;
+  std::this_thread::sleep_for(std::chrono::seconds(2));
+  std::cout << "Thread function finished" << std::endl;
   *result = total;
   // 打印线程 id 和计算结果
-  cout << "Thread id: " << get_id() << " calculate result is " << *result
-       << endl;
+  std::cout << "Thread id: " << std::this_thread::get_id()
+            << " calculate result is " << *result << std::endl;
 }
 
 void CreateThread() {
   // 打印当前线程 id
-  cout << "Main thread id: " << get_id() << endl;
-  cout << "create a new thread" << endl;
+  std::cout << "Main thread id: " << std::this_thread::get_id() << std::endl;
+  std::cout << "create a new thread" << std::endl;
   int result = 0;
-  thread t(ThreadFunc, &result);
+  std::thread t(ThreadFunc, &result);
   t.detach();
 }
 }  // namespace loongflavors

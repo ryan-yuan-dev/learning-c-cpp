@@ -3,17 +3,13 @@
 #include "include/common_include.h"
 #include "include/simple_thread.h"
 
-using std::cin;
-using std::cout;
-using std::endl;
-
 int main(int argc, char const *argv[]) {
   loongflavors::CreateThread();
-  cout << "Hello World!" << endl;
+  std::cout << "Hello World!" << std::endl;
   int c = 0;
   do {
-    cout << "Press q to exit" << endl;
-    c = cin.get();
+    std::cout << "Press q to exit" << std::endl;
+    c = std::cin.get();
   } while (c != 'q');
   // 从1打印到100
   return 0;
