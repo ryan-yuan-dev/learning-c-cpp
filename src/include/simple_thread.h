@@ -8,7 +8,7 @@ namespace loongflavors {
 void thread_func(int *result);
 
 // 声明创建线程的函数
-void create_thread();
+void CreateThread();
 }  // namespace loongflavors
 
 #endif  //  SRC_INCLUDE_SIMPLE_THREAD_H_

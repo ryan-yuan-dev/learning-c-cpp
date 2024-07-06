@@ -8,7 +8,7 @@ using std::cout;
 using std::endl;
 
 int main(int argc, char const *argv[]) {
-  loongflavors::create_thread();
+  loongflavors::CreateThread();
   cout << "Hello World!" << endl;
   int c = 0;
   do {

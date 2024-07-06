@@ -10,7 +10,7 @@ using std::chrono::seconds;
 using std::this_thread::get_id;
 using std::this_thread::sleep_for;
 namespace loongflavors {
-void thread_func(int *result) {
+void ThreadFunc(int *result) {
   int total = 0;
   for (size_t i = 0; i < 100; i++) {
     total += i;
@@ -24,12 +24,12 @@ void thread_func(int *result) {
        << endl;
 }
 
-void create_thread() {
+void CreateThread() {
   // 打印当前线程 id
   cout << "Main thread id: " << get_id() << endl;
   cout << "create a new thread" << endl;
   int result = 0;
-  thread t(thread_func, &result);
+  thread t(ThreadFunc, &result);
   t.detach();
 }
 }  // namespace loongflavors
