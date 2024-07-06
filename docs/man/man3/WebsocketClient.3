@@ -1,0 +1,78 @@
+.TH "WebsocketClient" 3 "Sat Jul 6 2024" "Version 0.0.1" "LoongFlavors" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WebsocketClient
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBloongflavors::IWebSocket\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBOpen\fP ()"
+.br
+.RI "Open the WebSocket connection\&. "
+.ti -1c
+.RI "void \fBClose\fP ()"
+.br
+.RI "Close the WebSocket connection\&. "
+.ti -1c
+.RI "void \fBSend\fP (const std::string &message)"
+.br
+.RI "Send a message to the WebSocket connection\&. "
+.ti -1c
+.RI "void \fBOnReceive\fP (const std::string &message)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "void WebsocketClient::Close ()\fC [inline]\fP, \fC [virtual]\fP"
+This function is responsible for closing the WebSocket connection\&. It should be called when the connection is no longer needed or when the application is about to exit\&. 
+.PP
+Implements \fBloongflavors::IWebSocket\fP\&.
+.SS "void WebsocketClient::OnReceive (const std::string & message)\fC [inline]\fP, \fC [virtual]\fP"
+Handles the reception of messages via web socket\&.
+.PP
+This function is called when a message is received via web socket\&. 
+.PP
+\fBSee also\fP
+.RS 4
+IWebSocket 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP The received message\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Implements \fBloongflavors::IWebSocket\fP\&.
+.SS "void WebsocketClient::Open ()\fC [inline]\fP, \fC [virtual]\fP"
+This function is responsible for establishing the WebSocket connection with the server\&. The specific implementation details depend on the underlying WebSocket library or framework used\&. 
+.PP
+Implements \fBloongflavors::IWebSocket\fP\&.
+.SS "void WebsocketClient::Send (const std::string & message)\fC [inline]\fP, \fC [virtual]\fP"
+This function is used to send data to an external device or communication endpoint on an IWebSocket connection\&. The data to be sent is passed as a const std::string& parameter named message\&. The specific implementation details depend on the underlying WebSocket library or framework used\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP The message to be sent, in the form of a std::string 
+.RE
+.PP
+
+.PP
+Implements \fBloongflavors::IWebSocket\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for LoongFlavors from the source code\&.

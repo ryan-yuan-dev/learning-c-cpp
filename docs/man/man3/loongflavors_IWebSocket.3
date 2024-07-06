@@ -1,0 +1,113 @@
+.TH "loongflavors::IWebSocket" 3 "Sat Jul 6 2024" "Version 0.0.1" "LoongFlavors" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+loongflavors::IWebSocket \- Interface for WebSocket communication\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <websocket\&.h>\fP
+.PP
+Inherited by \fBWebsocketClient\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBOpen\fP ()=0"
+.br
+.RI "Open the WebSocket connection\&. "
+.ti -1c
+.RI "virtual void \fBClose\fP ()=0"
+.br
+.RI "Close the WebSocket connection\&. "
+.ti -1c
+.RI "virtual void \fBSend\fP (const std::string &message)=0"
+.br
+.RI "Send a message to the WebSocket connection\&. "
+.ti -1c
+.RI "virtual void \fBSend\fP (const int8_t data[], size_t len)=0"
+.br
+.ti -1c
+.RI "virtual void \fBOnReceive\fP (const std::string &message)=0"
+.br
+.RI "Handle received messages on the WebSocket connection\&. "
+.ti -1c
+.RI "virtual \fB~IWebSocket\fP ()"
+.br
+.RI "Virtual destructor for the \fBIWebSocket\fP interface\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisOpen\fP = false"
+.br
+.RI "Check if the WebSocket connection is open\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This interface provides a standardized way to interact with WebSocket connections\&. It defines four pure virtual functions: \fBOpen()\fP, \fBClose()\fP, Send(message), and OnReceive(message)\&. Any class that implements this interface must provide its own implementation of these functions\&. The virtual destructor \fB~IWebSocket()\fP is also declared to ensure proper release of resources when the interface is destroyed\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual loongflavors::IWebSocket::~IWebSocket ()\fC [virtual]\fP"
+This virtual destructor is declared to ensure that any resources allocated in the implementing class can be properly released\&. When the \fBIWebSocket\fP interface is destructed, the destructor of the derived class will be automatically called, thereby releasing all resources\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void loongflavors::IWebSocket::Close ()\fC [pure virtual]\fP"
+This function is responsible for closing the WebSocket connection\&. It should be called when the connection is no longer needed or when the application is about to exit\&. 
+.PP
+Implemented in \fBWebsocketClient\fP\&.
+.SS "virtual void loongflavors::IWebSocket::OnReceive (const std::string & message)\fC [pure virtual]\fP"
+This function is a pure virtual function that needs to be overridden in the derived class\&. It is used to handle received messages and provides a callback mechanism\&. When a message is received on the WebSocket connection, this function will be called\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP The received message, in the form of a std::string 
+.RE
+.PP
+
+.PP
+Implemented in \fBWebsocketClient\fP\&.
+.SS "virtual void loongflavors::IWebSocket::Open ()\fC [pure virtual]\fP"
+This function is responsible for establishing the WebSocket connection with the server\&. The specific implementation details depend on the underlying WebSocket library or framework used\&. 
+.PP
+Implemented in \fBWebsocketClient\fP\&.
+.SS "virtual void loongflavors::IWebSocket::Send (const int8_t data[], size_t len)\fC [pure virtual]\fP"
+This function is used to send raw binary data to the server via a This function allows you to send an array of bytes (int8_t type) to a specific destination\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Pointer to the data buffer\&. 
+.br
+\fIlen\fP Length of the data in the buffer, in bytes\&. 
+.RE
+.PP
+
+.SS "virtual void loongflavors::IWebSocket::Send (const std::string & message)\fC [pure virtual]\fP"
+This function is used to send data to an external device or communication endpoint on an \fBIWebSocket\fP connection\&. The data to be sent is passed as a const std::string& parameter named message\&. The specific implementation details depend on the underlying WebSocket library or framework used\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP The message to be sent, in the form of a std::string 
+.RE
+.PP
+
+.PP
+Implemented in \fBWebsocketClient\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool loongflavors::IWebSocket::isOpen = false"
+This function is used to check if the WebSocket connection is currently open\&. It returns a boolean value indicating whether the connection is open or not\&.
+.PP
+\fBReturns\fP
+.RS 4
+True if the connection is open, false otherwise 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for LoongFlavors from the source code\&.

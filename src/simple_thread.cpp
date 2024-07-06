@@ -1,7 +1,7 @@
-// Copyright 2020 Ryan
+// Copyright 2024 Ryan <ryan.yuen@qq.com>
+#include <chrono>
 #include <iostream>
 #include <thread>
-#include <chrono>
 
 using std::cout;
 using std::endl;
@@ -32,3 +32,4 @@ void create_thread() {
   thread t(thread_func, &result);
   t.detach();
 }
+
