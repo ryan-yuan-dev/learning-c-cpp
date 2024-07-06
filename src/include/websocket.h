@@ -3,9 +3,9 @@
 #ifndef SRC_INCLUDE_WEBSOCKET_H_
 #define SRC_INCLUDE_WEBSOCKET_H_
 
-#include <string>
-
+#ifdef __cplusplus
 #include "include/types.h"
+#include <string>
 namespace loongflavors {
 /**
  * @brief Interface for WebSocket communication
@@ -91,7 +91,7 @@ public:
    */
   virtual ~IWebSocket();
 };
-
 }  // namespace loongflavors
+#endif
 
 #endif  // SRC_INCLUDE_WEBSOCKET_H_

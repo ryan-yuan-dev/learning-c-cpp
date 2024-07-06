@@ -13,11 +13,4 @@ void CreateThread();
 }  // namespace loongflavors
 #endif
 
-#ifdef __cplusplus
-extern "C" {
-void loongflavors_calute_in_subthread(int *result);
-void loongflavors_create_thread();
-}
-#endif
-
 #endif  //  SRC_INCLUDE_SIMPLE_THREAD_H_

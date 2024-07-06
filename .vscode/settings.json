@@ -52,7 +52,8 @@
     "thread": "cpp",
     "cstring": "cpp",
     "map": "cpp",
-    "sstream": "cpp"
+    "sstream": "cpp",
+    "simple_thread.h": "c"
   },
   "C_Cpp.clang_format_style": "file",
   "C_Cpp.clang_format_sortIncludes": true,
@@ -65,5 +66,6 @@
   "workbench.colorTheme": "Visual Studio Light - C++",
   "C_Cpp.default.compilerPath": "/usr/bin/clang++",
   "C_Cpp.clang_format_fallbackStyle": "none",
-  "C_Cpp.clang_format_path": "/usr/bin/clang-format"
+  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+  "editor.formatOnSave": true
 }

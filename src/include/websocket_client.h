@@ -3,10 +3,10 @@
 #ifndef SRC_INCLUDE_WEBSOCKET_CLIENT_H_
 #define SRC_INCLUDE_WEBSOCKET_CLIENT_H_
 
+#ifdef __cplusplus
+#include "include/websocket.h"
 #include <iostream>
 #include <string>
-
-#include "include/websocket.h"
 
 class WebsocketClient : public loongflavors::IWebSocket {
 public:
@@ -30,4 +30,5 @@ public:
 
   ~WebsocketClient() override {}
 };
+#endif
 #endif  // SRC_INCLUDE_WEBSOCKET_CLIENT_H_

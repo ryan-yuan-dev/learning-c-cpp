@@ -3,6 +3,7 @@
 #include <iostream>
 #include <thread>
 
+#ifdef __cplusplus
 namespace loongflavors {
 /**
  * @brief 线程函数，用于计算从0到99的累加和
@@ -42,16 +43,4 @@ void CreateThread() {
   std::cout << "Subthread calculated result: " << result << std::endl;
 }
 }  // namespace loongflavors
-
-#ifdef __cplusplus
-
-extern "C" {
-void loongflavors_calute_in_subthread(int *result) {
-  loongflavors::CaluteInSubthread(result);
-}
-
-void loongflavors_create_thread() {
-  loongflavors::CreateThread();
-}
-}
 #endif

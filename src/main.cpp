@@ -4,8 +4,8 @@
 #include "include/simple_thread.h"
 
 int main(int argc, char const *argv[]) {
-  loongflavors::CreateThread();
   std::cout << "Hello World!" << std::endl;
+  loongflavors::CreateThread();  
   int c = 0;
   do {
     std::cout << "Press q to exit" << std::endl;
