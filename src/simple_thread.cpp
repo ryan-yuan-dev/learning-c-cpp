@@ -9,7 +9,7 @@ using std::thread;
 using std::chrono::seconds;
 using std::this_thread::get_id;
 using std::this_thread::sleep_for;
-
+namespace loongflavors {
 void thread_func(int *result) {
   int total = 0;
   for (size_t i = 0; i < 100; i++) {
@@ -32,4 +32,4 @@ void create_thread() {
   thread t(thread_func, &result);
   t.detach();
 }
-
+}  // namespace loongflavors
